@@ -6,14 +6,14 @@ import { Bloom, EffectComposer, ToneMapping } from '@react-three/postprocessing'
 function App() {
   
   return (
-    <Canvas flat camera={{ fov:65}}>
+    <Canvas flat camera={{ fov:55}}>
       <OrbitControls />
       <ambientLight/>
       <Cyl/>
       <EffectComposer>
       <Bloom
       mipmapBlur
-    intensity={9.0} // The bloom intensity.
+    intensity={1.0} // The bloom intensity.
     luminanceThreshold={0} // luminance threshold. Raise this value to mask out darker elements in the scene.
     luminanceSmoothing={0} // smoothness of the luminance threshold. Range is [0, 1]
     />

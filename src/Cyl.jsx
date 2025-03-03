@@ -12,7 +12,7 @@ function Cyl() {
     return (
         <group rotation={[0, 1.4, 0.5]}>
       <mesh ref={cyl} >
-          <cylinderGeometry args={[2, 2, 2,60,60,true]} />
+          <cylinderGeometry args={[2, 2, 2,60,60,true]}/>
           <meshStandardMaterial map={tex} transparent side={THREE.DoubleSide} />
     </mesh>
     </group>
