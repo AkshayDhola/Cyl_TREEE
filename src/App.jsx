@@ -1,25 +1,17 @@
-import 'react';
+import React from 'react';
 import Cyl from './Cyl';
-import { Canvas } from '@react-three/fiber';
-import { OrbitControls } from '@react-three/drei';
-import { Bloom, EffectComposer, ToneMapping } from '@react-three/postprocessing'
+
 function App() {
-  
   return (
-    <Canvas flat camera={{ fov:55}}>
-      <OrbitControls />
-      <ambientLight/>
-      <Cyl/>
-      <EffectComposer>
-      <Bloom
-      mipmapBlur
-    intensity={1.0} // The bloom intensity.
-    luminanceThreshold={0} // luminance threshold. Raise this value to mask out darker elements in the scene.
-    luminanceSmoothing={0} // smoothness of the luminance threshold. Range is [0, 1]
-    />
-    </EffectComposer>
-    </Canvas>
-  )
+    <>
+      <div className="w-full h-screen bg-slate-300 relative overflow-hidden">
+        <Cyl boxColor='white' />
+      </div>
+      <div className="w-full h-screen bg-sky-200">
+        <h1>hello</h1>
+      </div>
+    </>
+  );
 }
 
-export default App
+export default App;
